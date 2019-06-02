@@ -1,0 +1,31 @@
+$ hadoop version
+$ hadoop fs -ls /
+$ hadoop fs -ls
+$ hadoop fs -mkdir <directory name>
+$ hadoop fs -copyFromLocal <filename>
+$ hadoop fs -put <directory>/<file name>
+$ hadoop fs –copyToLocal <file name>
+$ hadoop fs –get <directory>/<file name>
+$ hadoop dfs -cat test2.txt
+$ hadoop dfs -tail test3.txt ? Displays last KB of file
+$ hadoop fs –rm <file name>
+$ hadoop fs –rm -r <directory>
+
+$ hadoop fs –mv <dir1/filename1> <dir2/filename2>
+$ hadoop fs –cp <dir1/filename1> <dir2/filename2>
+
+$ hadoop fs -expunge
+$ hadoop fs -chmod a+r test3.txt ? Give read permissions to all for the file test3.txt
+$ hadoop fs –chmod go-w test3.txt ? Remove write permissions to group and others for the file test3.txt
+$ hdfs fsck <directory> / -files ? Checks and prints out files being checked
+$ hdfs fsck <directory> / -blocks ? Checks and prints out blocks being checked 
+$ hadoop fs –du <directory/file name> ? Check disk usage i.e. how much space this directory occupies in HDFS 
+$ hadoop fs -count hdfs:/ ?  Count the number of directories, files and bytes under the specified path 
+$ hadoop fs -df hdfs:/ ?  Report the amount of space used and available on currently mounted filesystem 
+$ hdfs fsck /user/hduser ? Runs a HDFS filesystem checking utility
+$ sudo -uhdfs hdfs dfsadmin -report ? Displays the list of DataNodes
+$ sudo -uhdfs hdfs dfsadmin -safemode enter ? Moves the cluster into safemode which is a read-only mode. Leave option will move it back to normal mode.
+$ hadoop fs -Ddfs.block.size=134217728  -put <filename1> <filename2> ? Copy to HDFS with block size of 128MB
+$ hadoop fs -Ddfs.block.size=67108864 -put <filename1> <filename2> ? Copy to HDFS with block size of 64MB
+$ hadoop fs -setrep 2 <filename> ? Copy to HDFS with replication factor as 2. Using option –w will request the command to wait for replication to complete. Can take a long time.
+$ hadoop fs -stat "%n %o %r"  <filename> ? Displays the name, block size and replication factor of the file.

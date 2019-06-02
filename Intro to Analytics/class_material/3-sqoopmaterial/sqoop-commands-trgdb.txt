@@ -1,0 +1,61 @@
+sqoop help
+sqoop help list-databases
+
+-- List databases in a MYSQL instance
+sqoop list-databases --connect jdbc:mysql://localhost/ --username root --password root
+sqoop list-databases --connect jdbc:mysql://localhost/ --username root -P
+
+--List Tables in a specified database
+sqoop list-tables --connect jdbc:mysql://localhost/trgdb --username root -P
+
+--Table with primary key
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --table cctab
+
+-- Import a table. Note that the command below will fail as there is no primary key, prompting you to use --split-by or -m 1
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --table tkttbl
+
+-- Import the table table specifying -m 1
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --table tkttbl -m 1
+
+-- Import the table table specifying --split-by <column>. Note that this import wil fail as the directory already exists.
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --table tkttbl --split-by tktid
+
+-- Hence specify HDFS destination dir
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --target-dir mydir --table tkttbl --split-by tktid
+OR
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --target-dir mydir --table tkttbl -m 1
+
+-- Import into an existing directory using --append mode
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --target-dir tkttbl --append --table cctab
+
+-- Import with different field delimiters
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root --password root --table cctab --target-dir cctab_delim --fields-terminated-by '\t' --lines-terminated-by '\n'
+
+-- HDFS parent for table destination
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --table cctbl_pid --warehouse-dir trgdir/ -m 1 
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root --password root --table pidlst --warehouse-dir trgdir/ -m 1 
+
+--Import all tables
+sqoop import-all-tables --connect jdbc:mysql://localhost/trgdb --username root -P --warehouse-dir trgdir -m 1
+
+--Exclude a table 
+sqoop import-all-tables --connect jdbc:mysql://localhost/trgdb --exclude-tablescctbl_pid,pidlst,cctab,cc12000 --username root -P --warehouse-dir trgdir -m 1
+--Comma separated list of tables can be given if multiple tables are to be excluded from import 
+
+-- Selecting data to import
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root -P --table tkttbl --target-dir tkttbl_ny -m 1 --where "stt = 'NY'"
+
+sqoop eval --connect jdbc:mysql://localhost/trgdb --username root --password root --query 'select cmpid, modl, cmpny, stt from cc12000'
+
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root --password root --target-dir ccshortq --query 'select cmpid,modl,cmpny,stt from cc12000 WHERE $CONDITIONS' --split-by cmpid -m 1
+
+sqoop eval --connect jdbc:mysql://localhost/trgdb --username root --password root --query 'select cmpid, cmpny, stt, p.prdid, p.prdname, p.prddesc from cctbl_pid i join pidlst p on (i.prdid = p.prdid)'
+
+sqoop import --connect jdbc:mysql://localhost/trgdb --username root --password root -m 1 --target-dir join-test --query 'select cmpid, cmpny, stt, p.prdid, p.prdname, p.prddesc from cctbl_pid i join pidlst p on (i.prdid = p.prdid) WHERE $CONDITIONS'
+
+sqoop import --connect jdbc:mysql://localhost/trgdb --table cctab --hive-import --username root -P -m 1
+
+-- Exporting data from HDFS to MYSQL. Put the file sqoopinput-pipe.txt from the given input data into a Hadoop directory sqoopinput. Create a table named exporttbl1 using the script given in the file mysql-queries.txt
+sqoop export --connect jdbc:mysql://localhost/trgdb --table exporttbl1 --export-dir sqoopinput --username root -P --fields-terminated-by '|' --lines-terminated-by '\n'
+
+172.19.5.66\ajaydata\60 seater ...\darshan

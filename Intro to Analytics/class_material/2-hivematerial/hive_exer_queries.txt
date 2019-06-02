@@ -1,0 +1,203 @@
+CREATE DATABASE IF NOT EXISTS retaildb1;
+
+USE retaildb1;
+
+set hive.cli.print.current.db=true;
+
+create table customers1 (customer_id int, customer_name string, customer_city string, customer_state string, customer_zipcode string) row format delimited fields terminated by "\t" lines terminated by "\n";
+
+show tables;
+
+describe customers1;
+
+describe formatted customers1;
+$ tail -n +2 customers1.txt > customers1.tsv
+
+Load data local inpath '/home/hduser/hivedata/customers1.tsv' overwrite into table customers1;
+-- In case you get any error messages in the above, open an additional session of terminal in a tab by pressing control+shift+T and check if the file you gave in the command above exists of not or if there are any typos in the file name or directory name. You can do this bu giving the command below at $ prompt (Not at hive> prompt)
+-- $ ls -l /home/hduser/hivedata/
+
+set hive.cli.print.header=true;
+
+Querying
+--------
+select * from customers1 limit 10;
+
+select * from customers1 where customer_state=="CA";
+
+create table products1 (salestxn_id int, product_name string, product_category string, category_id int, product_price double, product_quantity int, customer_id int) row format delimited fields terminated by "\t" lines terminated by "\n" stored as textfile;
+
+show tables;
+
+describe products1;
+
+describe formatted products1;
+
+Load data inpath '/user/hduser/hivedata/products1.tsv' overwrite into table products1;
+-- In case you get any error messages in the above, open an additional session of terminal in a tab by pressing control+shift+T and check if the file you gave in the command above exists of not or if there are any typos in the file name or directory name. You can do this bu giving the command below at $ prompt (Not at hive> prompt)
+-- $ hadoop fs -ls /user/hduser/hivedata/
+
+After successfully loading data from the file in HDFS, Check for the file /user/hduser/hivedata/products1.tsv by giving the following command at $ prompt (Not at hive> prompt)
+-- $ hadoop fs -ls <path-from-the-above-command>
+You will notice that the file had been moved, unlike the case of a loading data from a local file.
+
+Where has the file been moved to?
+---------------------------------
+The default location for hive tables is an HDFS directory /user/hive/warehouse.
+If you create a database then Hive will create a directory in the above location by the name <databasename.db>
+If you create a table by using this database then Hive will creat a sub-directory under it by name <tablename>
+If you do not use any database then Hive will create a sub-directory directly under /user/hive/warehouse and it is referred to has table under default database.
+
+Querying
+--------
+select * from products1 limit 20;
+
+select * from products1 where category_id>44 and product_price>200.00;
+
+---------------------------------
+Prep for external table creation:
+=================================
+-- Let us create the products1 table as an external table. As the first steplet us drop the existing products1 table.
+
+drop table products1;
+-- The above command drops the table. So we would lose the initial input file as it was moved from its locaiton to Hive Warehouse location. This is one of the characteristics of Managed Tables.
+
+Now, re-copy the file products1.tsv to the HDFS location /user/hduser/hivedata/ using hadoop fs -put command.
+
+===============
+External table:
+Create an external table in Hive with the command below which has the key word external before the word table and at the end has the location specified. Use any name for specifying the location but make sure there is no file or sub-directory already existing with this name.
+
+create external table products1 (salestxn_id int, product_name string, product_category string, category_id int, product_price double, product_quantity int, customer_id int) row format delimited fields terminated by "\t" lines terminated by "\n" stored as textfile location '/user/hduser/products1_ext';
+
+-- With the command below from $ prompt, you will see that a sub-dir is created by Hive with the name you supplied above.
+$ hadoop fs -ls /user/hduser
+
+-- In Hive check the table properties with these commands.
+show tables;
+describe products1;
+describe formatted products1;
+
+-- Notice the table type and the location.
+
+-- Now we can load the data from the HDFS input directory.
+load data inpath '/user/hduser/hivedata/products1.tsv' overwrite into table products1;
+
+-- In fact we need not use the Hive load command to load data into a Hive external table. Even if we use hadoop fs -mv <sourcefile> <targetlocation> or use hadoop fs -put command and get the data file into the external table location the data will be loaded into the Hive external table.
+
+-- Now from the Linux prompt list the contents of the above HDFS input directory by giving the command
+$ hadoop fs -ls /user/hduser/hivedata
+-- You will notice that the file is moved from the above location
+-- List the contents of the HDFS directory specified as location in the creation statement
+$ hadoop fs -ls /user/hduser/products1_ext
+-- You will notice that the file is moved to this location
+-- You can drop the above extrenal table by the Hive command below from the Hive prompt.
+hive> drop table products1
+-- Even if you drop the above table you will notice that the file with the data in the above location will still be present. It will not be removed by Hive as it is an external table. You can check this by the command below from the Linux prompt:
+$ hadoop fs -ls /user/hduser/products1
+
+
+create external table mrtable(cmpid int, module string, comp string, state string) row format delimited fields terminated by "\t" lines terminated by "\n" stored as textfile location '/user/aakanshav10/mapred';
+=================================================
+
+Querying
+--------
+select * from products1 limit 20;
+
+select * from products1 where category_id>44 and product_price>200.00;
+
+
+select customer_state, count(*) from customers1 group by customer_state;
+
+select customer_state, count(*) as sttcount from customers1 group by customer_state having sttcount>100;
+
+select category_id, product_category, count(*) as prdcount from products1 group by category_id, product_category;
+
+select category_id, product_category, count(*) as prdcount from products1 group by category_id, product_category order by product_category;
+
+select category_id, product_category, count(*) as prdcount from products1 where product_price>200 group by category_id, product_category order by product_category;
+
+select a.customer_name, b.product_category, count(*) as prdcount from customers1 a join products1 b on a.customer_id=b.customer_id group by a.customer_name, b.product_category having prdcount>1;
+
+-- Get the list of customers and product categories in which they bought multiple items (quantity)
+select a.customer_name, b.product_category, count(*) as prdcount from customers1 a inner join products1 b on a.customer_id=b.customer_id group by a.customer_name, b.product_category having prdcount>1;
+
+-- Get the list of customers and product categories in which they bought multiple items (quantity) that are more expensive than 200.00
+select a.customer_name, b.product_category, count(*) as prdcount from customers1 a inner join products1 b on a.customer_id=b.customer_id where b.product_price>200.00 group by a.customer_name, b.product_category having prdcount>1;
+
+-------------------------------------------------
+Writing the output to different target locations:
+-------------------------------------------------
+insert overwrite local directory 'customerlist1' row format delimited
+fields terminated by '\t'
+lines terminated by '\n'
+select a.customer_name, b.product_category, count(*) as prdcount from customers1 a inner join products1 b on a.customer_id=b.customer_id where b.product_price>200.00 group by a.customer_name, b.product_category having prdcount>1;
+
+-- From Linux prompt you can give the command
+$ ls -l customerlist1
+$ head customerlist1/00*
+-- to see the contents of the outout directory created by Hive and the top few lines of the outputfile.
+
+insert overwrite directory 'customerlist2'
+select a.customer_name, b.product_category, count(*) as prdcount from customers1 a inner join products1 b on a.customer_id=b.customer_id where b.product_price>200.00 group by a.customer_name, b.product_category having prdcount>1;
+
+insert overwrite directory 'customerlist3' row format delimited
+fields terminated by '\t'
+lines terminated by '\n'
+select a.customer_name, b.product_category, count(*) as prdcount from customers1 a inner join products1 b on a.customer_id=b.customer_id where b.product_price>200.00 group by a.customer_name, b.product_category having prdcount>1;
+
+-- From Linux prompt you can give the command
+$ hadoop fs -ls customerlist2(3)
+$ hadoop fs -tail customerlist2(3)/00*
+-- to see the contents of the outout directory created by Hive and the last few lines (1KB) of the outputfile.
+
+create table customerlist_tbl as select a.customer_name, b.product_category, count(*) as prdcount from customers1 a inner join products1 b on a.customer_id=b.customer_id where b.product_price>200.00 group by a.customer_name, b.product_category having prdcount>1;
+
+select * from customerlist_tbl limit 10;
+
+===================
+Partitioned Tables:
+
+create external table products2 (salestxn_id int, product_name string, product_category string, product_price double, product_quantity int, customer_id int) PARTITIONED BY (category_id int) row format delimited fields terminated by "\t" lines terminated by "\n" stored as textfile location '/user/hduser/products2_part';
+
+select salestxn_id, product_name, product_category, product_price, product_quantity, customer_id, category_id from products1 limit 20;
+
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+describe products2;
+
+INSERT OVERWRITE TABLE products2 PARTITION (category_id) select salestxn_id, product_name, product_category, product_price, product_quantity, customer_id, category_id from products1;
+
+show partitions products2;
+
+-- You can use all the select quries with group by, join etc clauses on the partitioned tables just as any other table.
+
+-- List contents of the directory given in the create table command using the follwoing from Linux prompt:
+
+$ hadoop fs -ls /user/hduser/products2_part
+
+-- You will notice that several sub-directories are created in the above which are the partitions and the names will be 'category_id=1' and 'category_id=2' etc
+-- List contents of the partitions using the command below.
+
+$ hadoop fs -ls /user/hduser/products2_part/category_id=1
+
+-- Display the contents of the data file in the partition with the command.
+
+$ hadoop fs -cat /user/hduser/products2_part/category_id=1
+
+-- The data will be a small subset of the entire daily data which belongs to this partition.
+
+===============================
+
+Clustering records or Bucketing
+-------------------------------
+
+create table customers_b (customer_id int, customer_name string, customer_city string, customer_zipcode string) PARTITIONED BY (customer_state string) CLUSTERED BY (customer_city) INTO 50 BUCKETS row format delimited fields terminated by "\t" lines terminated by "\n";
+
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.enforce.bucketing = true;
+
+select customer_id, customer_name, customer_city, customer_zipcode, customer_state from customers1;
+
+INSERT OVERWRITE TABLE customers_b PARTITION (customer_state) select customer_id, customer_name, customer_city, customer_zipcode, customer_state from customers1;
+

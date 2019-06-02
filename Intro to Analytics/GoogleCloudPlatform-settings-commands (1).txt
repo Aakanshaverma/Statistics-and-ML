@@ -1,0 +1,13 @@
+gs://dataproc-initialization-actions/jupyter/jupyter.sh
+
+(paste the above in initialization script on the web browser in advanced settings while creating cluster)
+
+gcloud compute ssh --zone=us-east1-b --ssh-flag="-D" --ssh-flag="10000" --ssh-flag="-N" "cluster-71a6-m"
+
+MS-Windows:
+"%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe"  --proxy-server="socks5://localhost:10000" --host-resolver-rules="MAP * 0.0.0.0 , EXCLUDE localhost" --user-data-dir="%Temp%\cluster-71a6-m" "http://"cluster-71a6-m:8088"
+
+Mac:
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --proxy-server="socks5://localhost:10000" --host-resolver-rules="MAP * 0.0.0.0 , EXCLUDE localhost" --user-data-dir="%Temp%\cluster-71a6-m" "http://"cluster-71a6-m:8088"
+
+Use port number 8123 on the browser for jupyter
