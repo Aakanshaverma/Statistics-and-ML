@@ -1,0 +1,301 @@
+Individuals	age	gender	income	kids	Home	Subscribe	Segment
+Ind1	47	Male	49482.81044	2	No	No	Suburb mix
+Ind2	31	Male	35546.2883	1	Yes	No	Suburb mix
+Ind3	43	Male	44169.18638	0	Yes	No	Suburb mix
+Ind4	37	Female	81041.98639	1	No	No	Suburb mix
+Ind5	41	Female	79353.01444	3	Yes	No	Suburb mix
+Ind6	43	Male	58143.36332	4	Yes	No	Suburb mix
+Ind7	38	Male	19282.23062	3	No	No	Suburb mix
+Ind8	28	Male	47245.23847	0	No	No	Suburb mix
+Ind9	44	Female	48332.51977	1	No	No	Suburb mix
+Ind10	35	Female	52567.89026	0	Yes	No	Suburb mix
+Ind11	48	Male	47917.56324	0	Yes	No	Suburb mix
+Ind12	38	Female	65767.47829	0	No	No	Suburb mix
+Ind13	33	Female	69337.6563	2	No	No	Suburb mix
+Ind14	43	Male	57200.14564	3	Yes	No	Suburb mix
+Ind15	39	Male	47099.77358	1	Yes	No	Suburb mix
+Ind16	42	Male	57036.83733	3	Yes	No	Suburb mix
+Ind17	42	Female	53127.05883	0	Yes	No	Suburb mix
+Ind18	44	Female	41254.80429	0	Yes	No	Suburb mix
+Ind19	38	Female	63528.47495	1	Yes	No	Suburb mix
+Ind20	32	Female	52649.53718	2	Yes	Yes	Suburb mix
+Ind21	48	Female	48197.80835	1	Yes	No	Suburb mix
+Ind22	37	Female	46163.38332	6	Yes	No	Suburb mix
+Ind23	30	Male	44151.93089	2	No	No	Suburb mix
+Ind24	38	Female	56128.00884	2	Yes	No	Suburb mix
+Ind25	33	Female	62519.89079	4	Yes	No	Suburb mix
+Ind26	40	Female	51195.96838	1	Yes	No	Suburb mix
+Ind27	27	Male	59440.87407	2	No	No	Suburb mix
+Ind28	45	Male	57362.59022	0	No	No	Suburb mix
+Ind29	35	Female	56112.12278	1	No	No	Suburb mix
+Ind30	40	Female	76488.69967	2	No	No	Suburb mix
+Ind31	54	Male	65717.43073	1	No	No	Suburb mix
+Ind32	43	Female	45175.35618	3	No	No	Suburb mix
+Ind33	37	Male	49943.11842	1	Yes	No	Suburb mix
+Ind34	37	Male	60040.7919	4	No	No	Suburb mix
+Ind35	45	Female	65169.57719	0	No	No	Suburb mix
+Ind36	34	Male	46765.31054	1	No	No	Suburb mix
+Ind37	44	Male	61291.81467	3	Yes	No	Suburb mix
+Ind38	43	Female	49392.66994	1	No	No	Suburb mix
+Ind39	33	Female	30769.55075	2	Yes	No	Suburb mix
+Ind40	41	Female	59804.93271	2	Yes	No	Suburb mix
+Ind41	45	Male	52648.89441	2	Yes	No	Suburb mix
+Ind42	30	Female	54260.20178	3	No	No	Suburb mix
+Ind43	41	Male	49741.61736	2	Yes	No	Suburb mix
+Ind44	43	Male	71992.09845	1	No	No	Suburb mix
+Ind45	46	Male	51918.24679	1	No	No	Suburb mix
+Ind46	34	Male	55377.82223	1	No	No	Suburb mix
+Ind47	39	Female	67502.12478	3	Yes	No	Suburb mix
+Ind48	40	Female	67932.84877	1	No	No	Suburb mix
+Ind49	47	Female	46714.9353	3	No	No	Suburb mix
+Ind50	41	Male	28270.15397	2	Yes	No	Suburb mix
+Ind51	37	Female	73304.42684	2	Yes	No	Suburb mix
+Ind52	40	Male	58037.91944	2	Yes	No	Suburb mix
+Ind53	34	Female	55847.41113	6	Yes	Yes	Suburb mix
+Ind54	43	Male	62190.84365	3	No	No	Suburb mix
+Ind55	42	Female	52813.23672	4	Yes	No	Suburb mix
+Ind56	45	Male	51578.9315	4	No	No	Suburb mix
+Ind57	37	Male	54140.79131	1	Yes	No	Suburb mix
+Ind58	34	Male	60971.7596	2	No	No	Suburb mix
+Ind59	35	Male	27670.21866	1	No	No	Suburb mix
+Ind60	41	Male	59138.23706	3	No	No	Suburb mix
+Ind61	40	Female	46748.86649	1	No	No	Suburb mix
+Ind62	49	Male	57948.61897	1	No	No	Suburb mix
+Ind63	42	Female	40776.87613	3	No	No	Suburb mix
+Ind64	36	Female	49348.17889	1	No	No	Suburb mix
+Ind65	46	Male	68636.45579	1	No	Yes	Suburb mix
+Ind66	40	Female	61386.50036	2	No	No	Suburb mix
+Ind67	39	Female	39588.2797	1	No	No	Suburb mix
+Ind68	33	Female	72675.41623	3	Yes	No	Suburb mix
+Ind69	32	Female	56246.70841	2	No	No	Suburb mix
+Ind70	43	Male	59188.61426	1	No	No	Suburb mix
+Ind71	36	Female	53428.0641	1	No	No	Suburb mix
+Ind72	40	Female	70379.25822	2	Yes	No	Suburb mix
+Ind73	49	Female	38400.5648	1	Yes	No	Suburb mix
+Ind74	42	Male	51412.55619	1	No	No	Suburb mix
+Ind75	33	Male	53166.74493	4	Yes	No	Suburb mix
+Ind76	33	Male	85290.50869	4	No	No	Suburb mix
+Ind77	44	Male	46079.06354	1	No	No	Suburb mix
+Ind78	39	Male	60008.66693	3	No	No	Suburb mix
+Ind79	42	Male	49674.78816	0	Yes	No	Suburb mix
+Ind80	40	Male	49815.67078	1	Yes	No	Suburb mix
+Ind81	48	Female	79544.19697	1	Yes	No	Suburb mix
+Ind82	38	Female	52289.05476	3	No	No	Suburb mix
+Ind83	43	Female	66932.7264	1	Yes	No	Suburb mix
+Ind84	34	Male	49346.7008	2	Yes	Yes	Suburb mix
+Ind85	36	Male	66274.99783	1	No	No	Suburb mix
+Ind86	36	Male	39442.71771	1	No	No	Suburb mix
+Ind87	45	Female	47002.83606	1	Yes	No	Suburb mix
+Ind88	44	Female	42339.13323	5	No	No	Suburb mix
+Ind89	42	Female	58871.47526	3	No	Yes	Suburb mix
+Ind90	40	Male	76184.66525	2	Yes	No	Suburb mix
+Ind91	45	Male	68937.19912	5	Yes	No	Suburb mix
+Ind92	48	Female	63683.96187	2	Yes	No	Suburb mix
+Ind93	40	Male	57134.93915	0	No	No	Suburb mix
+Ind94	41	Male	60770.57261	3	No	No	Suburb mix
+Ind95	45	Male	53416.85749	3	Yes	Yes	Suburb mix
+Ind96	41	Male	44890.70404	5	Yes	No	Suburb mix
+Ind97	37	Female	58891.15091	2	Yes	No	Suburb mix
+Ind98	36	Female	57985.55011	1	No	No	Suburb mix
+Ind99	46	Male	56015.74327	3	Yes	No	Suburb mix
+Ind100	43	Male	29257.56682	1	No	No	Suburb mix
+Ind101	25	Male	18457.84788	1	No	Yes	Urban hip
+Ind102	26	Male	26487.82517	1	No	Yes	Urban hip
+Ind103	23	Male	11985.24917	1	No	No	Urban hip
+Ind104	21	Male	16646.4787	3	No	No	Urban hip
+Ind105	23	Male	17784.56891	1	No	No	Urban hip
+Ind106	23	Male	23886.46661	1	No	No	Urban hip
+Ind107	23	Male	17510.27596	1	No	Yes	Urban hip
+Ind108	21	Male	18419.25047	1	Yes	Yes	Urban hip
+Ind109	22	Male	21107.36874	0	No	No	Urban hip
+Ind110	23	Male	25506.19158	2	No	No	Urban hip
+Ind111	23	Female	21698.81957	3	No	No	Urban hip
+Ind112	24	Male	23843.509	0	No	No	Urban hip
+Ind113	24	Male	15493.40296	1	No	No	Urban hip
+Ind114	21	Male	22517.20588	3	No	No	Urban hip
+Ind115	27	Male	25210.86817	0	No	No	Urban hip
+Ind116	23	Male	17382.01368	4	No	No	Urban hip
+Ind117	24	Female	22760.17562	0	No	No	Urban hip
+Ind118	24	Female	18118.86475	1	Yes	No	Urban hip
+Ind119	25	Male	32191.14878	1	No	No	Urban hip
+Ind120	26	Male	23812.14535	2	Yes	No	Urban hip
+Ind121	25	Female	12544.68371	1	No	Yes	Urban hip
+Ind122	23	Female	22402.73395	0	Yes	No	Urban hip
+Ind123	27	Male	23996.50674	1	No	No	Urban hip
+Ind124	22	Female	24541.24439	1	No	No	Urban hip
+Ind125	25	Male	22905.35965	2	Yes	No	Urban hip
+Ind126	24	Male	22014.37356	0	No	No	Urban hip
+Ind127	24	Male	20297.11858	0	No	No	Urban hip
+Ind128	22	Male	27807.2395	2	No	Yes	Urban hip
+Ind129	23	Female	15910.53604	0	No	Yes	Urban hip
+Ind130	22	Female	20222.02144	2	Yes	Yes	Urban hip
+Ind131	24	Male	18106.83694	0	No	No	Urban hip
+Ind132	25	Female	22102.83522	2	No	No	Urban hip
+Ind133	26	Female	17366.8618	0	No	No	Urban hip
+Ind134	21	Female	27244.1731	1	No	No	Urban hip
+Ind135	28	Male	22179.17809	1	No	No	Urban hip
+Ind136	23	Male	33909.49699	3	No	No	Urban hip
+Ind137	25	Male	23326.44864	2	No	Yes	Urban hip
+Ind138	21	Female	17082.74356	2	No	No	Urban hip
+Ind139	28	Female	31284.8545	2	Yes	No	Urban hip
+Ind140	25	Male	17757.6682	1	No	No	Urban hip
+Ind141	25	Female	20125.79856	2	No	Yes	Urban hip
+Ind142	25	Female	23839.48362	0	No	No	Urban hip
+Ind143	22	Male	16341.09061	0	No	No	Urban hip
+Ind144	22	Male	24533.93098	2	Yes	No	Urban hip
+Ind145	25	Female	25841.24531	0	Yes	No	Urban hip
+Ind146	19	Female	18592.96164	0	No	No	Urban hip
+Ind147	26	Female	12406.09973	0	No	No	Urban hip
+Ind148	26	Male	28329.02098	1	No	No	Urban hip
+Ind149	23	Female	27211.82665	0	No	No	Urban hip
+Ind150	25	Female	23052.33536	0	Yes	No	Urban hip
+Ind151	56	Female	91509.24545	0	Yes	No	Travelers
+Ind152	64	Male	61052.07737	0	Yes	No	Travelers
+Ind153	46	Male	-5183.354243	0	Yes	No	Travelers
+Ind154	57	Female	68364.62976	0	No	No	Travelers
+Ind155	68	Female	25772.24141	0	Yes	No	Travelers
+Ind156	67	Male	54060.59062	0	Yes	No	Travelers
+Ind157	66	Female	66616.40215	0	Yes	No	Travelers
+Ind158	43	Male	51787.88424	0	No	No	Travelers
+Ind159	76	Female	23968.10719	0	Yes	No	Travelers
+Ind160	61	Male	-693.9989152	0	Yes	No	Travelers
+Ind161	52	Female	50531.7187	0	Yes	No	Travelers
+Ind162	54	Female	85769.63725	0	Yes	No	Travelers
+Ind163	56	Male	75456.80342	0	Yes	No	Travelers
+Ind164	53	Male	72314.99758	0	Yes	No	Travelers
+Ind165	51	Male	36907.63331	0	Yes	No	Travelers
+Ind166	66	Female	46832.36489	0	Yes	No	Travelers
+Ind167	62	Male	94845.25308	0	Yes	No	Travelers
+Ind168	46	Female	50337.36131	0	Yes	No	Travelers
+Ind169	57	Female	58287.20345	0	Yes	No	Travelers
+Ind170	50	Male	60738.59303	0	Yes	No	Travelers
+Ind171	65	Female	78231.33448	0	Yes	No	Travelers
+Ind172	49	Male	61153.43161	0	No	Yes	Travelers
+Ind173	65	Male	45517.14508	0	No	Yes	Travelers
+Ind174	71	Male	48697.14565	0	No	No	Travelers
+Ind175	42	Male	39379.35183	0	Yes	No	Travelers
+Ind176	57	Male	47529.08567	0	Yes	No	Travelers
+Ind177	51	Male	61453.20398	0	Yes	No	Travelers
+Ind178	62	Female	48371.36256	0	Yes	No	Travelers
+Ind179	62	Male	68895.307	0	Yes	No	Travelers
+Ind180	57	Female	37797.90678	0	Yes	No	Travelers
+Ind181	55	Female	96508.89392	0	Yes	No	Travelers
+Ind182	56	Female	55318.22107	0	Yes	No	Travelers
+Ind183	58	Female	105537.8216	0	Yes	No	Travelers
+Ind184	68	Male	104312.445	0	Yes	No	Travelers
+Ind185	51	Female	48946.07335	0	Yes	Yes	Travelers
+Ind186	49	Female	59075.11933	0	No	No	Travelers
+Ind187	59	Female	60168.28251	0	Yes	No	Travelers
+Ind188	56	Female	64723.60175	0	Yes	No	Travelers
+Ind189	58	Male	86776.81791	0	Yes	No	Travelers
+Ind190	39	Female	77424.64762	0	Yes	No	Travelers
+Ind191	68	Female	51535.114	0	No	No	Travelers
+Ind192	61	Male	72646.73732	0	Yes	No	Travelers
+Ind193	64	Male	50749.38934	0	No	No	Travelers
+Ind194	51	Male	42467.36892	0	Yes	Yes	Travelers
+Ind195	44	Male	51354.48111	0	Yes	No	Travelers
+Ind196	46	Male	77294.76032	0	Yes	No	Travelers
+Ind197	50	Female	62286.31558	0	Yes	No	Travelers
+Ind198	53	Male	60976.52952	0	Yes	No	Travelers
+Ind199	58	Male	79570.04741	0	Yes	Yes	Travelers
+Ind200	61	Female	15346.68006	0	Yes	No	Travelers
+Ind201	63	Female	46587.21633	0	Yes	No	Travelers
+Ind202	65	Male	113456.7973	0	No	No	Travelers
+Ind203	45	Male	63595.4752	0	Yes	No	Travelers
+Ind204	59	Female	78870.66083	0	Yes	Yes	Travelers
+Ind205	51	Female	78019.71522	0	No	No	Travelers
+Ind206	68	Female	69075.44942	0	No	No	Travelers
+Ind207	66	Female	101173.5572	0	Yes	No	Travelers
+Ind208	61	Male	60930.74425	0	Yes	No	Travelers
+Ind209	61	Male	62932.79857	0	No	No	Travelers
+Ind210	48	Female	92431.45512	0	Yes	No	Travelers
+Ind211	54	Male	45947.02955	0	Yes	No	Travelers
+Ind212	52	Female	68450.75291	0	No	No	Travelers
+Ind213	62	Female	82348.68673	0	Yes	No	Travelers
+Ind214	52	Male	49195.36901	0	Yes	No	Travelers
+Ind215	72	Female	60279.33253	0	Yes	Yes	Travelers
+Ind216	60	Male	36982.5616	0	Yes	No	Travelers
+Ind217	51	Female	71487.62428	0	No	No	Travelers
+Ind218	61	Female	74776.77199	0	No	No	Travelers
+Ind219	57	Male	37604.66748	0	No	Yes	Travelers
+Ind220	62	Female	29870.5387	0	Yes	No	Travelers
+Ind221	78	Female	24604.42945	0	Yes	No	Travelers
+Ind222	47	Male	64843.08526	0	No	No	Travelers
+Ind223	80	Male	82076.82954	0	Yes	Yes	Travelers
+Ind224	57	Male	48402.19179	0	Yes	Yes	Travelers
+Ind225	59	Male	114278.2556	0	Yes	No	Travelers
+Ind226	61	Male	96902.39242	0	Yes	No	Travelers
+Ind227	56	Female	58359.69436	0	No	No	Travelers
+Ind228	55	Female	106430.0483	0	Yes	No	Travelers
+Ind229	61	Female	72474.45836	0	No	No	Travelers
+Ind230	66	Male	55406.74036	0	No	No	Travelers
+Ind231	32	Female	50595.77697	2	Yes	No	Moving up
+Ind232	38	Male	50980.48415	5	Yes	No	Moving up
+Ind233	46	Female	40590.08101	3	No	No	Moving up
+Ind234	31	Male	52298.07271	2	No	No	Moving up
+Ind235	34	Male	57663.8608	3	No	No	Moving up
+Ind236	36	Male	56977.08585	2	Yes	No	Moving up
+Ind237	33	Female	36411.98261	0	No	No	Moving up
+Ind238	38	Male	46974.98796	3	Yes	No	Moving up
+Ind239	30	Male	65233.25569	2	No	No	Moving up
+Ind240	43	Female	58739.30967	3	Yes	No	Moving up
+Ind241	33	Female	49509.42993	1	Yes	No	Moving up
+Ind242	34	Female	57037.86319	1	No	Yes	Moving up
+Ind243	37	Female	53792.40107	0	No	No	Moving up
+Ind244	39	Female	69947.60295	2	No	No	Moving up
+Ind245	39	Female	57265.30258	0	No	No	Moving up
+Ind246	39	Female	49895.17651	3	No	No	Moving up
+Ind247	36	Female	52953.41239	2	Yes	No	Moving up
+Ind248	31	Female	70541.49893	4	No	No	Moving up
+Ind249	43	Female	66923.61982	0	No	No	Moving up
+Ind250	34	Male	39678.9516	2	No	No	Moving up
+Ind251	41	Female	54864.78265	2	No	No	Moving up
+Ind252	35	Female	60045.47236	0	Yes	No	Moving up
+Ind253	38	Male	68037.8091	4	No	No	Moving up
+Ind254	34	Female	73797.50155	0	No	No	Moving up
+Ind255	33	Female	53604.17116	3	No	No	Moving up
+Ind256	39	Male	52110.45811	1	No	Yes	Moving up
+Ind257	43	Female	69549.93371	3	No	Yes	Moving up
+Ind258	31	Female	50473.35764	3	Yes	Yes	Moving up
+Ind259	34	Female	61154.53881	1	No	No	Moving up
+Ind260	32	Female	65688.5287	3	No	No	Moving up
+Ind261	39	Female	49267.08728	2	Yes	Yes	Moving up
+Ind262	29	Female	29771.90686	3	No	No	Moving up
+Ind263	36	Male	51829.62303	1	No	No	Moving up
+Ind264	34	Male	45637.09487	1	Yes	No	Moving up
+Ind265	39	Male	53668.85947	7	Yes	No	Moving up
+Ind266	32	Female	43413.71987	4	No	No	Moving up
+Ind267	36	Male	62087.12484	0	No	No	Moving up
+Ind268	34	Female	49235.01665	2	No	No	Moving up
+Ind269	43	Male	39779.99399	0	Yes	No	Moving up
+Ind270	38	Female	41097.10378	2	No	No	Moving up
+Ind271	32	Female	52776.42123	1	Yes	Yes	Moving up
+Ind272	42	Female	58756.31584	2	No	No	Moving up
+Ind273	39	Female	44811.78138	5	Yes	No	Moving up
+Ind274	40	Female	44125.39935	4	Yes	No	Moving up
+Ind275	37	Female	36257.92805	1	No	No	Moving up
+Ind276	39	Female	45347.00538	1	Yes	Yes	Moving up
+Ind277	30	Female	50720.21542	0	No	No	Moving up
+Ind278	36	Female	46540.87642	1	No	Yes	Moving up
+Ind279	37	Female	50560.1687	3	Yes	No	Moving up
+Ind280	37	Female	59663.28019	1	No	No	Moving up
+Ind281	32	Female	55940.77763	3	No	No	Moving up
+Ind282	34	Female	66007.98941	3	No	No	Moving up
+Ind283	37	Female	39366.95269	1	No	Yes	Moving up
+Ind284	38	Female	54509.25417	2	No	No	Moving up
+Ind285	42	Female	49308.97485	2	No	No	Moving up
+Ind286	40	Female	54740.2793	0	Yes	No	Moving up
+Ind287	36	Male	49775.28828	1	No	Yes	Moving up
+Ind288	36	Female	41766.29224	2	No	Yes	Moving up
+Ind289	26	Female	73240.62279	2	No	No	Moving up
+Ind290	42	Male	53520.35533	1	No	No	Moving up
+Ind291	36	Male	66423.73863	1	No	No	Moving up
+Ind292	36	Female	41192.27986	4	No	No	Moving up
+Ind293	40	Female	58933.34433	2	Yes	Yes	Moving up
+Ind294	36	Female	52352.68646	1	No	Yes	Moving up
+Ind295	36	Male	40522.39198	0	Yes	No	Moving up
+Ind296	33	Female	43882.42561	0	Yes	No	Moving up
+Ind297	41	Female	64197.08688	2	No	No	Moving up
+Ind298	38	Male	47580.92678	0	No	Yes	Moving up
+Ind299	33	Male	60747.3364	1	No	No	Moving up
+Ind300	34	Male	53674.93137	5	Yes	No	Moving up
