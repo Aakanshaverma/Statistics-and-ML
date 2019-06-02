@@ -1,0 +1,21 @@
+Prepaid Plans
+--------------
+Plan name (Unique)
+Recharge type (FTT, Data only, Top-up, Special, SMS Pack)
+Price (Rs.)
+Validity (days)
+Talk time (minutes)
+No. of Local Calls
+No. of STD Calls
+No. of SMSs
+Size of Data (GB)
+Remarks
+
+Identify:
+
+Super key(s)
+ 
+Candidate key(s)
+
+Primary key
+
